@@ -25,6 +25,7 @@ with learning binary trees as it can be quite intimidating at first but is not t
 
 ![binarytree](./binary-tree.png)
 
+
 ## <a name="pic"></a> Code (In C++)
 
 ```cpp
@@ -95,7 +96,10 @@ Node *root = new Node(1);
 The Problem here is with the **new** keyword. If we look into new's defination we can deduce that new is an operator(like any other)
 which _returns a void pointer_. Therefore the object _root_ should also be a pointer.
 
+![newoperator](./newop.png)
+
 Under the hood new is just a **malloc**.It's the same as writing
+
 
 ```cpp
 malloc(sizeof(Node*))
@@ -104,7 +108,6 @@ malloc(sizeof(Node*))
 While using malloc just allocates the memory for us, using new is going to allocate and also call the
 **constructor** for us that is used to initialize values.
 
- <img alt="gif" src="./newop.gif" width="570"/>
 
 ## How is a Node stored in Memory ?
 
